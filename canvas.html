@@ -1,0 +1,113 @@
+<hmtl>
+	<head>
+		<script>
+	function a(){
+		console.log("test")
+		var canvas = document.getElementById("test")
+		console.log(canvas)
+		var ctx = canvas.getContext("2d")
+		console.log(ctx)
+		ctx.beginPath();
+				// ctx.moveTo(500, 500);
+				// ctx.lineTo(300, 150);
+				// // console.log("line "+i+" "+j)
+				// ctx.stroke();
+		for(var i = 0; i<50; i++){
+			for(var j = 0; j <50; j++){
+				
+				// ctx.beginPath();
+				ctx.moveTo(500, 500);
+				ctx.lineTo(300+(i*10), 150 +(j*10) );
+				console.log("line "+i+" "+j)
+				ctx.stroke();
+			}
+		}
+	}
+	function b(){
+		console.log("test")
+		var canvas = document.getElementById("test")
+		console.log(canvas)
+		var ctx = canvas.getContext("2d")
+		console.log(ctx)
+		ctx.beginPath();
+				// ctx.moveTo(500, 500);
+				// ctx.lineTo(300, 150);
+				// // console.log("line "+i+" "+j)
+				// ctx.stroke();
+		for(var i = 0; i<50; i++){
+			for(var j = 0; j <50; j++){
+				
+				// ctx.beginPath();
+				ctx.moveTo(2000, 200);
+				ctx.lineTo((i*13), (j*13) );
+				console.log("line "+i+" "+j)
+				ctx.stroke();
+			}
+		}
+	}	
+	function c(){
+		console.log("test")
+		var canvas = document.getElementById("test")
+		console.log(canvas)
+		var ctx = canvas.getContext("2d")
+		console.log(ctx)
+		ctx.beginPath();
+				// ctx.moveTo(500, 500);
+				// ctx.lineTo(300, 150);
+				// // console.log("line "+i+" "+j)
+				// ctx.stroke();
+		for(var i = 0; i<50; i++){
+			for(var j = 0; j <50; j++){
+				
+				// ctx.beginPath();
+				ctx.moveTo(2000, 2000);
+				ctx.lineTo((i*36), (j*36) );
+				console.log("line "+i+" "+j)
+				ctx.stroke();
+			}
+		}
+	}
+	function d(){
+		var canvas = document.getElementById("test")
+		var ctx = canvas.getContext("2d")
+		ctx.beginPath();
+		for(var i = 0; i<50; i++){
+			for(var j = 0; j <50; j++){
+				ctx.moveTo(3000, 3000);
+				ctx.lineTo((i*160), (j*160) );
+				ctx.stroke();
+			}
+		}
+	}
+	function e(){
+		var canvas = document.getElementById("test")
+		var ctx = canvas.getContext("2d")
+		ctx.beginPath();
+		for(var i = 0; i<50; i++){
+			for(var j = 0; j <50; j++){
+				ctx.moveTo(2000, 0);
+				ctx.lineTo(50+(i*160), (j*160) );
+				ctx.stroke();
+			}
+		}
+	}
+	function f(){
+		var canvas = document.getElementById("test")
+		var ctx = canvas.getContext("2d")
+		ctx.beginPath();
+		for(var i = 20; i<50; i++){
+			for(var j = 20; j <50; j++){
+				ctx.moveTo(4000, 0);
+				ctx.lineTo((i*160), 50+(j*25) );
+				ctx.stroke();
+			}
+		}
+	}	
+</script>
+<body>
+	</head>
+<button onclick="f()">t</button>
+<canvas id="test" width="8000" height="8000">
+</canvas>
+</body>
+</hmtl>
