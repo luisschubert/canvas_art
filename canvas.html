@@ -1,6 +1,9 @@
 <hmtl>
 	<head>
 		<script>
+	function getRandomInt(max) {
+  		return Math.floor(Math.random() * Math.floor(max));
+	}
 	function a(){
 		console.log("test")
 		var canvas = document.getElementById("test")
@@ -20,6 +23,60 @@
 				ctx.lineTo(300+(i*10), 150 +(j*10) );
 				console.log("line "+i+" "+j)
 				ctx.stroke();
+			}
+		}
+	}
+	function a1(){
+		console.log("test")
+		var canvas = document.getElementById("test")
+		console.log(canvas)
+		var ctx = canvas.getContext("2d")
+		console.log(ctx)
+		colors = ["#FF3030","#FF4040", "#FC1501", "#FFE4E1" , "#FFF5EE" , "#855E42	"]
+		ctx.beginPath();
+				// ctx.moveTo(500, 500);
+				// ctx.lineTo(300, 150);
+				// // console.log("line "+i+" "+j)
+				// ctx.stroke();
+		for(var i = 0; i<50; i++){
+			for(var j = 0; j <50; j++){
+				
+				ctx.beginPath();
+				ctx.moveTo(500, 500);
+				random_int = getRandomInt(colors.length)
+				console.log("randomInt: " + random_int)
+				ctx.strokeStyle = colors[random_int]
+				ctx.lineTo(300+(i*10), 150 +(j*10) );
+				console.log("line "+i+" "+j)
+				ctx.stroke();
+				ctx.closePath()
+			}
+		}
+	}
+	function a2(){
+		console.log("test")
+		var canvas = document.getElementById("test")
+		console.log(canvas)
+		var ctx = canvas.getContext("2d")
+		console.log(ctx)
+		colors = ["#FF3030","#FF4040", "#FC1501", "#FFE4E1" , "#FFF5EE" , "#855E42	"]
+		
+				// ctx.moveTo(500, 500);
+				// ctx.lineTo(300, 150);
+				// // console.log("line "+i+" "+j)
+				// ctx.stroke();
+		for(var i = 0; i<23; i++){
+			for(var j = 0; j <23; j++){
+				ctx.beginPath();
+				// ctx.beginPath();
+				ctx.moveTo(700, 700);
+				random_int = getRandomInt(colors.length)
+				console.log("randomInt: " + random_int)
+				ctx.strokeStyle = colors[random_int]
+				ctx.lineTo(600+(i*20), 300 +(j*20) );
+				console.log("line "+i+" "+j)
+				ctx.stroke();
+				ctx.closePath()
 			}
 		}
 	}
@@ -95,18 +152,54 @@
 		var canvas = document.getElementById("test")
 		var ctx = canvas.getContext("2d")
 		ctx.beginPath();
-		for(var i = 20; i<50; i++){
+		for(var i = 0; i<50; i++){
 			for(var j = 20; j <50; j++){
 				ctx.moveTo(4000, 0);
-				ctx.lineTo((i*160), 50+(j*25) );
+				ctx.lineTo((i*160), 250+(j*50) );
 				ctx.stroke();
 			}
 		}
-	}	
+	}
+	function f1(){
+		var canvas = document.getElementById("test")
+		var ctx = canvas.getContext("2d")
+		colors_red_brown = ["#FF3030","#FF4040", "#FC1501", "#FFE4E1" , "#FFF5EE" , "#855E42"]
+
+
+		for(var i = 0; i<50; i++){
+			for(var j = 20; j <50; j++){
+				ctx.beginPath();
+				random_int = getRandomInt(colors_red_brown.length)
+				ctx.strokeStyle = colors_red_brown[random_int]
+				ctx.moveTo(4000, 0);
+				ctx.lineTo((i*160), 250+(j*50) );
+				ctx.stroke();
+				ctx.closePath()
+			}
+		}
+	}
+	function f2() {
+		var canvas = document.getElementById("test")
+		var ctx = canvas.getContext("2d")
+		colors_yellow_green =["#FFE600", "#AADD00", "#385E0F", "#FFD700", "#FFCC11", "#AEBB51"]
+
+
+		for(var i = 0; i<50; i++){
+			for(var j = 20; j <50; j++){
+				ctx.beginPath();
+				random_int = getRandomInt(colors_yellow_green.length)
+				ctx.strokeStyle = colors_yellow_green[random_int]
+				ctx.moveTo(4000, 0);
+				ctx.lineTo((i*160), 250+(j*50) );
+				ctx.stroke();
+				ctx.closePath()
+			}
+		}
+	}		
 </script>
 <body>
 	</head>
-<button onclick="f()">t</button>
+<button onclick="f2()">t</button>
 <canvas id="test" width="8000" height="8000">
 </canvas>
 </body>
